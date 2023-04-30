@@ -30,7 +30,8 @@ int main()
         }   
     }
     // Assign waiting times and turn times
-    for(i=0;i<n;i++) {
+    for(i=0;i<n;i++) 
+    {
         waitTime[i] = totwt;
         totwt+=burstTime[i];
         turnTime[i] = totwt;
