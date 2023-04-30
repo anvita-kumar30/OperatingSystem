@@ -9,7 +9,7 @@ int main()
     printf("Enter the burst time for each process: \n");
     for(i=0;i<n;i++) 
     {
-        printf("Burst Time for Process P%d: ",i+1);
+        printf("Burst Time for Process P%d: ",i);
         scanf("%d",&burstTime[i]);
         process[i]=i;
     }
@@ -37,11 +37,13 @@ int main()
     }
     // Print result
     printf("\nWAITING TIME \n------------\n");
-    for(i=0;i<n;i++) {
+    for(i=0;i<n;i++) 
+    {
         printf("P%d --> %d\n",process[i],waitTime[i]);
     }
     printf("\nTURN AROUND TIME \n----------------\n");
-    for(i=0;i<n;i++) {
+    for(i=0;i<n;i++) 
+    {
         printf("P%d --> %d\n",process[i],turnTime[i]);
     }
     for(i=0;i<n;i++) 
