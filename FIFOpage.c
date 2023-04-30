@@ -1,4 +1,4 @@
-//FIFO Page Replacement Policy
+//FIFO Algorithm (Page Replacement Policy)
 #include <stdio.h>
 int main()
 {
