@@ -1,4 +1,4 @@
-//First Fit Memory Allocation Technique
+//Worst Fit Memory Allocation Technique
 #include <stdio.h>
 int main() 
 {
@@ -16,14 +16,21 @@ int main()
     for (i = 0; i < n; i++) 
     {
         allocation[i] = -1;
+        int max_size_index = -1;
         for (j = 0; j < m; j++) 
         {
             if (block_sizes[j] >= process_sizes[i]) 
             {
-                allocation[i] = j;
-                block_sizes[j] -= process_sizes[i];
-                break;
+                if (max_size_index == -1) 
+                    max_size_index = j;
+                else if (block_sizes[j] > block_sizes[max_size_index]) 
+                    max_size_index = j;
             }
+        }
+        if (max_size_index != -1) 
+        {
+            allocation[i] = max_size_index;
+            block_sizes[max_size_index] -= process_sizes[i];
         }
     }
     printf("\nProcess No.\tProcess Size\tBlock no.\n");
