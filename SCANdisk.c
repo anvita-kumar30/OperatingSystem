@@ -45,6 +45,18 @@ int main()
             break;
         }
     }
+    printf("The requests are processed in the following order: %d -> ",track[headPos]);
+    for(i=headPos+1 ;i<=nt;i++) 
+    {
+        printf("%d -> ",track[i]);
+    }
+    for(i=headPos-1 ;i>=0;i--) 
+    {
+        if(i!=0) 
+            printf("%d -> ",track[i]);
+        else    
+            printf("%d \n",track[i]);
+    }
     dist = (track[nt]-track[headPos])+(track[nt]-track[0]);
     printf("The total seek distance is: %d \n",dist);
     return 0;
