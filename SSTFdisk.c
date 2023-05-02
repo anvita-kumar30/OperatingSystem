@@ -10,7 +10,7 @@ int main()
     printf("Enter the current location of pointer head: ");
     scanf("%d",&head);
     temp = head;
-    printf("Enter the requested tracks in FIFO orider: \n");
+    printf("Enter the requested tracks in FIFO order: \n");
     for(i=0;i<nt;i++) 
     {
         scanf("%d",&track[i]);
