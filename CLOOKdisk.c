@@ -43,6 +43,18 @@ int main()
             break;
         }
     }
+    printf("The requests are processed in the following order: %d -> ",track[headPos]);
+    for(i=headPos+1 ;i<=nt;i++) 
+    {
+        printf("%d -> ",track[i]);
+    }
+    for(i=0 ;i<=headPos-1;i++) 
+    {
+        if(i!=headPos-1) 
+            printf("%d -> ",track[i]);
+        else    
+            printf("%d \n",track[i]);
+    }
     dist = (track[nt]-track[headPos])+(track[nt]-track[0])+(track[headPos-1]-track[0]);
     printf("The total seek distance is: %d cylinders\n",dist);
 }
