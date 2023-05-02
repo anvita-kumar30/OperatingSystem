@@ -15,7 +15,8 @@ int main()
         scanf("%d",&track[i]);
     // Display the order in which requested tracks are processed
     printf("The requested tracks are processed in order: %d -> ",head);
-    for(i=1;i<=nt;i++) {
+    for(i=1;i<=nt;i++) 
+    {
         if(i!=nt)
             printf("%d -> ",track[i]);
         else
